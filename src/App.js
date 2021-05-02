@@ -10,6 +10,10 @@ function App() {
       <Link to="/login">
       <button>Log In Here</button>
       </Link>
+
+      <Link to="/home">
+      <button>Home page</button>
+      </Link>
     </div>
   );
 }
