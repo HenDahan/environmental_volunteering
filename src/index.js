@@ -3,21 +3,22 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {BrowserRouter} from 'react-router-dom';
-import {Route, Link} from 'react-router-dom';
-import Home from './Home';
-import Log_in_page from './Log_in_page';
 
 ReactDOM.render(
-  <BrowserRouter>
+  <React.StrictMode>
     <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+
+
+/*
     <switch>
       <Route exect path="/home" component={Home} />
       <Route exect path="/login" component={Log_in_page} />
+      <Route exect path="/Signup" component={Signup} />
     </switch>
-  </BrowserRouter>,
-  document.getElementById('root')
-);
+    */
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
