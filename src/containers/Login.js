@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import "./Login.css";
+import {Route, Link} from 'react-router-dom';
+import Home from '../Home';
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -10,7 +12,7 @@ export default function Login() {
 
   function validateForm() {
     return email.length > 0 && password.length > 0;
-  }
+  } 
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -36,9 +38,11 @@ export default function Login() {
             onChange={(e) => setPassword(e.target.value)}
           />
         </Form.Group>
-        <Button block size="lg" type="submit" disabled={!validateForm()}>
-          Login
-        </Button>
+          <Link to="/home">
+            <Button block size="lg" type="submit" disabled={!validateForm()}>
+              Login
+            </Button>
+          </Link>
       </Form>
     </div>
   );
