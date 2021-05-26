@@ -1,0 +1,35 @@
+.bg-light {
+    background-color: #d5dbb3!important;
+}
+.navbar-default {
+    margin-left:auto; 
+    margin-right:auto;
+    width:38.5%;
+}
+
+.home{
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+}
+
+
+.registration{
+    position: absolute;
+    right: 90px;
+    bottom: 10px;
+    
+}
+
+.login{
+    position: absolute;
+    right: 160px;
+    bottom: 10px;
+    
+}
+.about{
+    position: absolute;
+    right: 240px;
+    bottom: 10px;
+    
+}
