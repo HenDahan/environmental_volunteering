@@ -1,43 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
-import Home from './Home';
-import {Route, Link} from 'react-router-dom';
-import styled from "styled-components";
-import { AccountBox } from './containers/accountBox';
-
-const AppContainer = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-`;
-
+// import logo from './logo.svg';
+// import './App.css';
+import React from 'react'
+import { Navbar } from "./components/Navbar/Navbar";
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 function App() {
   return (
-
-    <AppContainer>
-      <AccountBox />
-    </AppContainer>
-    /*
-    <Route exact path="/">
-      <Login />
-    </Route>
-*/
-    
-/*
-    <div className="App">
-      <Link to="/login">
-      <button>Log In Here</button>
-      </Link>
-
-      <Link to="/home">
-      <button>Home page</button>
-      </Link>
+  <Router>
+    <div className="App"> 
+        <Navbar />
+        <div className="content">
+          {/* <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route  path="/about">
+              <About />
+            </Route>
+            <Route  path="/login">
+              <Login />
+            </Route>
+          </Switch> */}
+        </div>
+      {/* <Footer /> */}
     </div>
-    */
+  </Router>
+
   );
 }
 
