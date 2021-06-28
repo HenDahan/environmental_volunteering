@@ -3,7 +3,7 @@ import './App.css';
 import Home from './Home';
 import {Route, Link} from 'react-router-dom';
 import styled from "styled-components";
-import { AccountBox } from './containers/accountBox';
+//import { AccountBox } from './containers/accountBox';
 
 const AppContainer = styled.div`
   width: 100%;
