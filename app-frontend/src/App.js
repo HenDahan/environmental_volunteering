@@ -3,6 +3,9 @@
 import React from 'react'
 import { Navbar } from "./components/Navbar/Navbar";
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import Home from "./components/Home";
+import MyActivities from './components/MyActivities';
+import CreateNewActivitiy from './components/CreateNewActivitiy';
 
 function App() {
   return (
@@ -10,17 +13,15 @@ function App() {
     <div className="App"> 
         <Navbar />
         <div className="content">
-          {/* <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route  path="/about">
-              <About />
-            </Route>
+          {<Switch>
+            <Route exact path="/Home" component={Home} />
+            <Route path="/MyActivities" component={MyActivities} />
+            <Route  path="/CreateNewActivitiy" component={CreateNewActivitiy} />
+
             <Route  path="/login">
-              <Login />
+              {/*<Login />*/}
             </Route>
-          </Switch> */}
+          </Switch>}
         </div>
       {/* <Footer /> */}
     </div>
