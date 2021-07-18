@@ -1,11 +1,9 @@
 import React from 'react'
-//import { Navbar } from "./Navbar/Navbar";
 import {BrowserRouter as Router} from 'react-router-dom';
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
-import ActivitiesTable from "./Tables/ActivitiesTable";
+import ActivitiesTable from "../Tables/ActivitiesTable";
 
-/* materialpalette.com/colors */
 
 const theme = {
     green: {
@@ -39,7 +37,7 @@ function MyActivities() {
   const history = useHistory();
   
   const handleRoute = () =>{ 
-    history.push("./Home");
+    history.push("./Activity");
   }
   return (
   <Router>
@@ -57,7 +55,7 @@ function MyActivities() {
           Cancel Request
         </Button>
         <Button onClick={handleRoute}>
-          Back to Home
+          Back
         </Button>
         
     </div>

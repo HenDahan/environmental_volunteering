@@ -4,8 +4,10 @@ import React from 'react'
 import { Navbar } from "./components/Navbar/Navbar";
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Home from "./components/Home";
-import MyActivities from './components/MyActivities';
-import CreateNewActivitiy from './components/CreateNewActivitiy';
+import Activity from './components/Activities/Activity';
+import CreateNewActivity from './components/Activities/CreateNewActivity';
+import MyActivities from './components/Activities/MyActivities';
+import SearchActivity from './components/Activities/SearchActivity';
 
 function App() {
   return (
@@ -15,10 +17,12 @@ function App() {
         <div className="content">
           {<Switch>
             <Route exact path="/Home" component={Home} />
-            <Route path="/MyActivities" component={MyActivities} />
-            <Route  path="/CreateNewActivitiy" component={CreateNewActivitiy} />
+            <Route path="/Activities/Activity" component={Activity} />
+            <Route  path="/Activities/CreateNewActivity" component={CreateNewActivity} />
+            <Route  path="/Activities/MyActivities" component={MyActivities} />
+            <Route  path="/Activities/SearchActivity" component={SearchActivity} />
 
-            <Route  path="/login">
+            <Route>
               {/*<Login />*/}
             </Route>
           </Switch>}

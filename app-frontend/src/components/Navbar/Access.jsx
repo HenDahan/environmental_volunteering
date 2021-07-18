@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { useHistory } from 'react-router-dom';
 
 const AccessContainer = styled.div`
   display: flex;
@@ -56,10 +57,16 @@ const RegisterButton = styled.button`
 `;
 
 export function Access(props) {
+  let history = useHistory();
+
+  const redirect = () => {
+    history.push('../Home')
+  }
+
   return (
     <AccessContainer>
       <RegisterButton>Register</RegisterButton>
-      <LoginButton>Login</LoginButton>
+      <LoginButton onClick={redirect}>Login</LoginButton>
     </AccessContainer>
   );
 }

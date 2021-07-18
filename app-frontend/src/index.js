@@ -2,11 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+//import { Provider } from 'react-redux';
 // import reportWebVitals from './reportWebVitals';
 // import Header from './components/Header/Header';
 // import Footer from "./components/Footer/Footer";
 
-ReactDOM.render(<App />,
+ReactDOM.render(
+
+  <App />,
+ 
   document.getElementById('root')
 );
 

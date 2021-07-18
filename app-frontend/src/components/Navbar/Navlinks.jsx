@@ -46,16 +46,16 @@ export function NavLinks(props) {
     <NavLinksContainer>
       <LinksWarpper>
         <LinkItem>
-          <Link href="Home">Home</Link>
+          <Link href="../Home">Home</Link>
         </LinkItem>
         <LinkItem>
-          <Link href="../MyActivities"> Activities</Link>
+          <Link href="../Activities/Activity"> Activities</Link>
         </LinkItem>
         <LinkItem>
-          <Link href="../CreateNewActivitiy"> About Us</Link>
+          <Link href="../Activities/CreateNewActivity"> About Us</Link>
         </LinkItem>
         <LinkItem>
-          <Link href="#"> Contact</Link>
+          <Link href="../Activities/MyActivities"> Contact</Link>
         </LinkItem>
       </LinksWarpper>
     </NavLinksContainer>

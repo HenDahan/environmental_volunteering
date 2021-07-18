@@ -2,7 +2,7 @@ import React from 'react'
 import {BrowserRouter as Router} from 'react-router-dom';
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
-import ActivitiesTable from "./Tables/ActivitiesTable";
+//import ActivitiesTable from "../Tables/ActivitiesTable";
 //&nbsp; regular space.
 //&ensp; two spaces gap.
 //&emsp; four spaces gap.
@@ -38,22 +38,22 @@ Button.defaultProps = {
 
 
 
-function CreateNewActivitiy() {
+function CreateNewActivity() {
   const history = useHistory();
   
   const handleRoute = () =>{ 
-    history.push("./Home");
+    history.push("./Activity");
   }
   return (
   <Router>
     <div className="CreateNewActivitiy"> 
         <div className="content">
-          <h1>My Activities</h1>
+          <h1>Create New Activities</h1>
         </div>
 
         <form>
             <lable>
-                Activity location: &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &ensp; 
+                Activity Location: &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &ensp; 
             </lable>
             <input type="text" location="location" />
             <br/><br/>
@@ -95,7 +95,7 @@ function CreateNewActivitiy() {
           Create New Activity
         </Button>
         <Button onClick={handleRoute}>
-          Back to Home
+          Back
         </Button>
 
     </div>
@@ -104,4 +104,4 @@ function CreateNewActivitiy() {
   );
 }
 
-export default CreateNewActivitiy;
+export default CreateNewActivity;
