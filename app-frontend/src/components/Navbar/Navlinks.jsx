@@ -52,11 +52,12 @@ export function NavLinks(props) {
           <Link href="../Activities/Activity"> Activities</Link>
         </LinkItem>
         <LinkItem>
-          <Link href="../Activities/CreateNewActivity"> About Us</Link>
+          <Link href="../AboutUs"> About Us</Link>
         </LinkItem>
         <LinkItem>
-          <Link href="../Activities/MyActivities"> Contact</Link>
+        <Link href="../Contact"> Contact</Link>{/*<Link href="../Contact"> Contact</Link>*/}
         </LinkItem>
+
       </LinksWarpper>
     </NavLinksContainer>
   );

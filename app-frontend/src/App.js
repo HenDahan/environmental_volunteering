@@ -8,6 +8,11 @@ import Activity from './components/Activities/Activity';
 import CreateNewActivity from './components/Activities/CreateNewActivity';
 import MyActivities from './components/Activities/MyActivities';
 import SearchActivity from './components/Activities/SearchActivity';
+import AboutUs from "./components/AboutUs";
+import Contact from "./components/Contact"
+import LoginPage from './components/Connections/LoginPage';
+import RegisterPage from './components/Connections/RegisterPage';
+import ActivitySignUp from './components/Activities/ActivitySignUp';
 
 function App() {
   return (
@@ -20,11 +25,19 @@ function App() {
             <Route path="/Activities/Activity" component={Activity} />
             <Route  path="/Activities/CreateNewActivity" component={CreateNewActivity} />
             <Route  path="/Activities/MyActivities" component={MyActivities} />
+            <Route  path="/Activities/ActivitySignUp" component={ActivitySignUp} />
             <Route  path="/Activities/SearchActivity" component={SearchActivity} />
+            <Route path="/AboutUs" component={AboutUs} />
+            <Route path="/Contact" component={Contact} />
+            <Route path="/Connections/LoginPage" component={LoginPage} />
+            <Route path="/Connections/RegisterPage" component={RegisterPage} />
+
 
             <Route>
-              {/*<Login />*/}
+              {/*<RegisterPage/>*/}
+              {/*<LoginPage/>*/}
             </Route>
+  
           </Switch>}
         </div>
       {/* <Footer /> */}

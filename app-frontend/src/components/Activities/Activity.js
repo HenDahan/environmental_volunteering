@@ -32,17 +32,20 @@ Button.defaultProps = {
 
 function Activity() {
   const history = useHistory();
-  const handleRoute = () =>{ 
+  const handleRouteHome = () =>{ 
     history.push("../Home");
   }
-  const handleRoute2 = () =>{ 
+  const handleRouteMyActivities = () =>{ 
     history.push("./MyActivities");
   }
-  const handleRoute3 = () =>{ 
+  const handleRouteCreateNewActivity = () =>{ 
     history.push("./CreateNewActivity");
   }
-  const handleRoute4 = () =>{ 
+  const handleRouteSearchActivity = () =>{ 
     history.push("./SearchActivity");
+  }
+    const handleRouteActivitySignUp = () =>{ 
+    history.push("./ActivitySignUp");
   }
   return (
   <Router>
@@ -52,22 +55,27 @@ function Activity() {
         </div>
 
         <br/>
-        <Button onClick={handleRoute2}>
+        <Button onClick={handleRouteMyActivities}>
           My Activiteis
         </Button>
         <br/>
         <br/>
-        <Button onClick={handleRoute3}>
+        <Button onClick={handleRouteActivitySignUp}>
+          Activity Sign-Up
+        </Button>
+        <br/>
+        <br/>
+        <Button onClick={handleRouteCreateNewActivity}>
           Create New Activiteis
         </Button>
         <br/>
         <br/>
-        <Button onClick={handleRoute4}>
+        <Button onClick={handleRouteSearchActivity}>
           Serch Activiteis
         </Button>
         <br/>
         <br/>
-        <Button onClick={handleRoute}>
+        <Button onClick={handleRouteHome}>
           Back
         </Button>
         

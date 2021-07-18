@@ -53,19 +53,19 @@ function CreateNewActivity() {
 
         <form>
             <lable>
-                Activity Location: &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &ensp; 
+                Activity Location: &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &nbsp;&nbsp;
             </lable>
             <input type="text" location="location" />
             <br/><br/>
 
             <lable>
-                Activity Date: &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &ensp;
+                Activity Date: &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &ensp;&nbsp;
             </lable>
             <input type="text" location="location" />
             <br/><br/>
 
             <lable>
-                Activity Time:  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &ensp;
+                Activity Time:  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &ensp;&nbsp;
             </lable>
             <input type="text" location="location" />
             <br/><br/>
