@@ -59,14 +59,19 @@ const RegisterButton = styled.button`
 export function Access(props) {
   let history = useHistory();
 
-  const redirect = () => {
-    history.push('../Home')
+
+  const redirectRegister = () => {
+      history.push('../connections/RegisterPage')
   }
+
+  const redirectLogin = () => {
+    history.push('../connections/LoginPage')
+}
 
   return (
     <AccessContainer>
-      <RegisterButton>Register</RegisterButton>
-      <LoginButton onClick={redirect}>Login</LoginButton>
+      <RegisterButton onClick={redirectRegister}>Register</RegisterButton>
+      <LoginButton onClick={redirectLogin}>Login</LoginButton>
     </AccessContainer>
   );
 }
