@@ -2,7 +2,7 @@ import React from 'react'
 import {BrowserRouter as Router} from 'react-router-dom';
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
-//import ActivitiesTable from "../Tables/ActivitiesTable";
+import ActivitiesTable from "../Tables/ActivitiesTable";
 
 
 const theme = {
@@ -46,9 +46,9 @@ function MyActivities() {
           <h1>My Activities</h1>
         </div>
 
-        {/*<ActivitiesTable>
+        <ActivitiesTable>
 
-        </ActivitiesTable>*/}
+        </ActivitiesTable>
 
  
         <br/><br/>

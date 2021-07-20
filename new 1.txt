@@ -1,0 +1,8 @@
+npm install 
+
+npm install -S jquery
+yarn add jquery
+
+npm install popper.js --save
+
+npm install react-data-table-component styled-components
