@@ -31,14 +31,12 @@ Button.defaultProps = {
     theme: 'green'
 }
 
-function MangeActivities() {
+function MangeActivities(props) {
 
-    {/**
-    const [activityType, setActivityType] = useState('Street'); // Street, Forest, Beach
-
+    const [activityType, setActivityType] = useState('Beach cleaning'); 
     const handleSubmit = (evt) => {
         evt.preventDefault();
-        alert('Search Activity is: ' + activityType )
+        alert('Mange Activities is: ' + activityType )
     }
 
 
@@ -47,15 +45,50 @@ function MangeActivities() {
   const handleRoute = (evt) =>{ 
     history.push("./Activity");
   }
- */}
+
 
   return (
-      <div>
+  <Router>
+    <div className="MangeActivities"> 
+        <div className="content">
 
-        <h1>      Mange Activities</h1>
-      </div>
-    
-    
+        </div>
+        <h1>Mange Activities</h1> 
+          <form onSubmit={handleSubmit}>
+              <br />
+              
+
+             
+              
+              &emsp;
+              
+
+
+              <lable>
+                Open Activities: &ensp; 
+            <select value={activityType} onChange={e => setActivityType(e.target.value)}> //set value here
+              <option value="Beach cleaning">Beach cleaning</option>
+              <option value="Forest cleaning">Forest cleaning</option>
+            </select>
+              </lable>
+              &emsp;
+              <input type="submit" value="Present" />
+          </form>
+        <br/>
+
+
+        <ActivitiesTable >
+
+        </ActivitiesTable>
+        
+ 
+        <br/><br/>
+        <Button onClick={handleRoute}>
+          Back
+        </Button>
+        
+    </div>
+  </Router>
     
   );
 }

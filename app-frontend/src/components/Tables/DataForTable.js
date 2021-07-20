@@ -22,6 +22,13 @@ export default [
     supervisor: "Naty",
     content: "Forest cleaning",
     location: "Lehavim - Lhav Forest"
+  },  {
+    id: 4,
+    title: "Keep the forests clean",
+    date: "18.7.2021",
+    supervisor: "Moshe",
+    content: "Forest cleaning",
+    location: "Lehavim - Lhav Forest"
   },
 
  ];

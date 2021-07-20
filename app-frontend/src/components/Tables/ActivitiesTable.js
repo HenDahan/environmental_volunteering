@@ -45,7 +45,7 @@ const BootyCheckbox = React.forwardRef(({ onClick, ...rest }, ref) => (
   </div>
 ));
 
-function ActivitiesTable() {
+function ActivitiesTable(props) {
   return (
     <div className="ActivitiesTable">
       <div className="card">

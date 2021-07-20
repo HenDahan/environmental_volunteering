@@ -32,7 +32,7 @@ function App() {
             <Route path="/Contact" component={Contact} />
             <Route path="/connections/LoginPage" component={LoginPage} />
             <Route path="/connections/RegisterPage" component={RegisterPage} />
-            <Route path="./components/Activities/MangeActivities" component={MangeActivities} />
+            <Route path="/Activities/MangeActivities" component={MangeActivities} />
   
           </Switch>}
         </div>
