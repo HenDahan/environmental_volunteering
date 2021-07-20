@@ -1,6 +1,6 @@
 import React from "react";
 import DataTable from "react-data-table-component";
-import movies from "./DataForTable";
+import activitiesDB from "./DataForTable";
 import "bootstrap";
 //import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./styles.css";
@@ -12,15 +12,24 @@ const columns = [
     sortable: true
   },
   {
-    name: "Directior",
-    selector: "director",
+    name: "Content",
+    selector: "content",
     sortable: true
   },
   {
-    name: "Runtime (m)",
-    selector: "runtime",
-    sortable: true,
-    right: true
+    name: "Location",
+    selector: "location",
+    sortable: true
+  },
+  {
+    name: "Supervisor",
+    selector: "supervisor",
+    sortable: true
+  },
+  {
+    name: "Date",
+    selector: "date",
+    sortable: true
   }
 ];
 
@@ -41,9 +50,9 @@ function ActivitiesTable() {
     <div className="ActivitiesTable">
       <div className="card">
         <DataTable
-          title="Movies"
+          title="Activities"
           columns={columns}
-          data={movies}
+          data={activitiesDB}
           defaultSortField="title"
           pagination
           selectableRows

@@ -8,16 +8,19 @@ const activitySchema = new mongoose.Schema({
     content: {
         type: String,
         required: true
+    },
+     location:{
+        type: String,
+        required: true
+     },
+    supervisor:{
+        type: String,
+        required: true
+    },
+    date:{
+        type: String,
+        required: true
     }
-    // location:{
-
-    // },
-    // supervisor:{
-
-    // },
-    // date:{
-
-    // }
 });
 
 const Activity = mongoose.model('activity',activitySchema);
