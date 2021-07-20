@@ -85,10 +85,16 @@ function Home() {
     </div>
     return (
         <div>
-            
-            <Columns/>
-
-    
+            <div>
+                <Columns/>
+            </div>
+            <div>
+                <p>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                    This website was built by Hen Kfir and Zuriel.
+                    Copyright and use of site data are reserved for site builders.
+                </p>
+            </div>
         </div>
     );
 }

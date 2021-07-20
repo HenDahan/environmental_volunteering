@@ -47,6 +47,10 @@ function Activity() {
     const handleRouteActivitySignUp = () =>{ 
     history.push("./ActivitySignUp");
   }
+  const handleRouteMangeActivities = () =>{ 
+    history.push("./MangeActivities");
+  }
+  
   return (
   <Router>
     <div className="Activity"> 
@@ -72,6 +76,11 @@ function Activity() {
         <br/>
         <Button onClick={handleRouteSearchActivity}>
           Serch Activiteis
+        </Button>
+        <br/>
+        <br/>
+        <Button onClick={handleRouteMangeActivities}>
+          Mange Activities
         </Button>
         <br/>
         <br/>

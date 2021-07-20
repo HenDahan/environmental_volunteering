@@ -55,7 +55,7 @@ export function NavLinks(props) {
           <Link href="../AboutUs"> About Us</Link>
         </LinkItem>
         <LinkItem>
-        <Link href="../Contact"> Contact</Link>{/*<Link href="../Contact"> Contact</Link>*/}
+        <Link href="../Contact"> Contact</Link>
         </LinkItem>
 
       </LinksWarpper>

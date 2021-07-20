@@ -13,6 +13,7 @@ import Contact from "./components/Contact"
 import LoginPage from './components/Connections/LoginPage';
 import RegisterPage from './components/Connections/RegisterPage';
 import ActivitySignUp from './components/Activities/ActivitySignUp';
+import MangeActivities from './components/Activities/MangeActivities';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
             <Route path="/Contact" component={Contact} />
             <Route path="/connections/LoginPage" component={LoginPage} />
             <Route path="/connections/RegisterPage" component={RegisterPage} />
+            <Route path="./components/Activities/MangeActivities" component={MangeActivities} />
   
           </Switch>}
         </div>
