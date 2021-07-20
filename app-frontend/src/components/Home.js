@@ -35,10 +35,12 @@ Button.defaultProps = {
 
 function Home() {
 
-    return (
-        <div>
-            <div style={{display: 'flex',  justifyContent:'center', height: '10vh'}}>
-                <h1> Welcom</h1>
+    const Columns = () => 
+    <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gridGap: 150 }}>
+        {/*Column 1 (left) */}
+      <div>
+      <div style={{display: 'flex',  justifyContent:'right', height: '10vh'}}>
+                
             </div>  
             <div style={{display: 'flex', justifyContent:'space-around', height: '25vh'}}>
             <img src={image1} height={150} width={250} />
@@ -52,11 +54,41 @@ function Home() {
             <img src={image3} height={150} width={250} />
             <br/>
             </div>
+      </div>
 
-            {/*<div style={{display: 'flex', position="absolute", top="40px", left="40px"}}>
-            <img src={image3} height={150} width={250} />
-            <br/>
-    </div>*/}
+      {/*Column 2 (center) */}
+      <div>
+        <div style={{display: 'flex',  justifyContent:'center', height: '10vh'}}>
+        <h1> Welcom</h1>
+        </div>
+        {/*Commercials and updates */}
+        <br/><br/><br/>
+        <p>
+            Commercials and updates....
+        </p>
+
+      </div>
+
+      {/*Column 3 (right) */}
+      <div>
+        <br/><br/><br/>
+        <h3>Important Messages </h3>
+        <a>
+            Coast cleanup activity <br/>
+            on 22.7 was postponed<br/> 
+            due to the hot weather.<br/>
+            The task has been moved<br/> 
+            to 13 of the next month.
+        </a>
+      </div>
+
+    </div>
+    return (
+        <div>
+            
+            <Columns/>
+
+    
         </div>
     );
 }

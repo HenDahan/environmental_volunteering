@@ -4,7 +4,7 @@ export default [
   {
     id: 1,
     title: "Keep the beaches clean",
-    date: "25.7.2021",
+    date: "13.8.2021",
     supervisor: "Moshe",
     content: "Beach cleaning",
     location: "Natania - Poleg Beach"
@@ -18,7 +18,7 @@ export default [
   },  {
     id: 3,
     title: "Keep the forests clean",
-    date: "25.7.2021",
+    date: "21.7.2021",
     supervisor: "Naty",
     content: "Forest cleaning",
     location: "Lehavim - Lhav Forest"
