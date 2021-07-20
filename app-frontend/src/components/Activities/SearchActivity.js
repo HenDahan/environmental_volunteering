@@ -2,7 +2,7 @@ import React from 'react'
 import {BrowserRouter as Router} from 'react-router-dom';
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
-import ActivitiesTable from "../Tables/ActivitiesTable";
+//import ActivitiesTable from "../Tables/ActivitiesTable";
 import { useState } from "react";
 
 
@@ -87,9 +87,10 @@ function SearchActivity(props) {
         <br/>
 
 
-        <ActivitiesTable>
+        {/*<ActivitiesTable>
 
-        </ActivitiesTable>
+        </ActivitiesTable>*/}
+        
  
         <br/><br/>
         <Button onClick={handleRoute}>
