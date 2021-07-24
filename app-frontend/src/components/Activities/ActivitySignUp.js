@@ -1,20 +1,20 @@
 import React from 'react'
-import {BrowserRouter as Router} from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
 import ActivitiesTable from "../Tables/ActivitiesTable";
 
 
 const theme = {
-    green: {
-      default: "#9ccc65",
-      hover: "#7cb342"
-    }
-  };
-
-  function JoinToActivity(){
-    alert("I Joined To Activity");
+  green: {
+    default: "#9ccc65",
+    hover: "#7cb342"
   }
+};
+
+function JoinToActivity() {
+  alert("I Joined To Activity");
+}
 
 
 const Button = styled.button`
@@ -30,18 +30,18 @@ const Button = styled.button`
 `
 
 Button.defaultProps = {
-    theme: 'green'
+  theme: 'green'
 }
 
 function ActivitySignUp() {
   const history = useHistory();
-  
-  const handleRoute = () =>{ 
+
+  const handleRoute = () => {
     history.push("./Activity");
   }
   return (
-  <Router>
-    <div className="ActivitySignUp"> 
+    <Router>
+      <div className="ActivitySignUp" style={{ marginLeft: "50px" }}>
         <div className="content">
           <h1>Activity Sign-Up</h1>
         </div>
@@ -49,18 +49,18 @@ function ActivitySignUp() {
         <ActivitiesTable>
 
         </ActivitiesTable>
-        
-        <br/><br/>
+
+        <br /><br />
         <Button onClick={JoinToActivity}>
-            Ask to join
+          Ask to join
         </Button>
         <Button onClick={handleRoute}>
           Back
         </Button>
-        
-    </div>
-  </Router>
-    
+
+      </div>
+    </Router>
+
   );
 }
 

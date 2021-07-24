@@ -1,5 +1,5 @@
 import React from 'react'
-import {BrowserRouter as Router} from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
 //import ActivitiesTable from "../Tables/ActivitiesTable";
@@ -9,15 +9,15 @@ import { useHistory } from "react-router-dom";
 
 
 const theme = {
-    green: {
-      default: "#9ccc65",
-      hover: "#7cb342"
-    }
-  };
-
-  function clickMe(){
-    alert("it is working");
+  green: {
+    default: "#9ccc65",
+    hover: "#7cb342"
   }
+};
+
+function clickMe() {
+  alert("it is working");
+}
 
 
 const Button = styled.button`
@@ -33,62 +33,62 @@ const Button = styled.button`
 `
 
 Button.defaultProps = {
-    theme: 'green'
+  theme: 'green'
 }
 
 
 
 function CreateNewActivity() {
   const history = useHistory();
-  
-  const handleRoute = () =>{ 
+
+  const handleRoute = () => {
     history.push("./Activity");
   }
   return (
-  <Router>
-    <div className="CreateNewActivitiy"> 
+    <Router>
+      <div className="CreateNewActivitiy" style={{ marginLeft: "50px" }}>
         <div className="content">
           <h1>Create New Activities</h1>
         </div>
 
         <form>
-            <lable>
-                Activity Location: &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &nbsp;&nbsp;
-            </lable>
-            <input type="text" location="location" />
-            <br/><br/>
+          <lable>
+            Activity Location: &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &nbsp;&nbsp;
+          </lable>
+          <input type="text" location="location" />
+          <br /><br />
 
-            <lable>
-                Activity Date: &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &ensp;&nbsp;
-            </lable>
-            <input type="text" location="location" />
-            <br/><br/>
+          <lable>
+            Activity Date: &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &ensp;&nbsp;
+          </lable>
+          <input type="text" location="location" />
+          <br /><br />
 
-            <lable>
-                Activity Time:  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &ensp;&nbsp;
-            </lable>
-            <input type="text" location="location" />
-            <br/><br/>
+          <lable>
+            Activity Time:  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &ensp;&nbsp;
+          </lable>
+          <input type="text" location="location" />
+          <br /><br />
 
-            <lable>
-                Activity Duration: &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &nbsp;
-            </lable>
-            <input type="text" location="location" />
-            <br/><br/>
+          <lable>
+            Activity Duration: &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &nbsp;
+          </lable>
+          <input type="text" location="location" />
+          <br /><br />
 
-            <lable>
-                Required Amount Of Volunteers: &emsp; 
-            </lable>
-            <input type="text" location="location" />
-            <br/><br/>
+          <lable>
+            Required Amount Of Volunteers: &emsp;
+          </lable>
+          <input type="text" location="location" />
+          <br /><br />
 
-            <lable>
-                Activity Description: &emsp; &emsp; &emsp; &emsp; &emsp; &nbsp;
-            </lable>
-            <input type="text" location="location" />
-            <br/><br/>
+          <lable>
+            Activity Description: &emsp; &emsp; &emsp; &emsp; &emsp; &nbsp;
+          </lable>
+          <input type="text" location="location" />
+          <br /><br />
         </form>
-        <br/><br/><br/>
+        <br /><br /><br />
 
 
         <Button onClick={clickMe}>
@@ -98,9 +98,9 @@ function CreateNewActivity() {
           Back
         </Button>
 
-    </div>
-  </Router>
-    
+      </div>
+    </Router>
+
   );
 }
 

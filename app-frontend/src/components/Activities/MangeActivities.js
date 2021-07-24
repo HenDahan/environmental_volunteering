@@ -1,5 +1,5 @@
 import React from 'react'
-import {BrowserRouter as Router} from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
 import ActivitiesTable from "../Tables/ActivitiesTable";
@@ -7,11 +7,11 @@ import { useState } from "react";
 
 
 const theme = {
-    green: {
-      default: "#9ccc65",
-      hover: "#7cb342"
-    }
-  };
+  green: {
+    default: "#9ccc65",
+    hover: "#7cb342"
+  }
+};
 
 
 
@@ -28,68 +28,61 @@ const Button = styled.button`
 `
 
 Button.defaultProps = {
-    theme: 'green'
+  theme: 'green'
 }
 
 function MangeActivities(props) {
 
-    const [activityType, setActivityType] = useState('Beach cleaning'); 
-    const handleSubmit = (evt) => {
-        evt.preventDefault();
-        alert('Mange Activities is: ' + activityType )
-    }
+  const [activityType, setActivityType] = useState('Beach cleaning');
+  const handleSubmit = (evt) => {
+    evt.preventDefault();
+    alert('Mange Activities is: ' + activityType)
+  }
 
 
-      
-  const history = useHistory();  
-  const handleRoute = (evt) =>{ 
+
+  const history = useHistory();
+  const handleRoute = (evt) => {
     history.push("./Activity");
   }
 
 
   return (
-  <Router>
-    <div className="MangeActivities"> 
+    <Router>
+      <div className="MangeActivities" style={{ marginLeft: "50px" }}>
         <div className="content">
 
         </div>
-        <h1>Mange Activities</h1> 
-          <form onSubmit={handleSubmit}>
-              <br />
-              
-
-             
-              
-              &emsp;
-              
-
-
-              <lable>
-                Open Activities: &ensp; 
+        <h1>Mange Activities</h1>
+        <form onSubmit={handleSubmit}>
+          <br />
+          &emsp;
+          <lable>
+            Open Activities: &ensp;
             <select value={activityType} onChange={e => setActivityType(e.target.value)}> //set value here
               <option value="Beach cleaning">Beach cleaning</option>
               <option value="Forest cleaning">Forest cleaning</option>
             </select>
-              </lable>
-              &emsp;
-              <input type="submit" value="Present" />
-          </form>
-        <br/>
+          </lable>
+          &emsp;
+          <input type="submit" value="Present" />
+        </form>
+        <br />
 
 
         <ActivitiesTable >
 
         </ActivitiesTable>
-        
- 
-        <br/><br/>
+
+
+        <br /><br />
         <Button onClick={handleRoute}>
           Back
         </Button>
-        
-    </div>
-  </Router>
-    
+
+      </div>
+    </Router>
+
   );
 }
 

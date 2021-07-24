@@ -1,20 +1,20 @@
 import React from 'react'
-import {BrowserRouter as Router} from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
 import ActivitiesTable from "../Tables/ActivitiesTable";
 
 
 const theme = {
-    green: {
-      default: "#9ccc65",
-      hover: "#7cb342"
-    }
-  };
-
-  function clickMe(){
-    alert("it is working");
+  green: {
+    default: "#9ccc65",
+    hover: "#7cb342"
   }
+};
+
+function clickMe() {
+  alert("it is working");
+}
 
 
 const Button = styled.button`
@@ -30,18 +30,18 @@ const Button = styled.button`
 `
 
 Button.defaultProps = {
-    theme: 'green'
+  theme: 'green'
 }
 
 function MyActivities() {
   const history = useHistory();
-  
-  const handleRoute = () =>{ 
+
+  const handleRoute = () => {
     history.push("./Activity");
   }
   return (
-  <Router>
-    <div className="MyActivities"> 
+    <Router>
+      <div className="MyActivities" style={{ marginLeft: "50px" }}>
         <div className="content">
           <h1>My Activities</h1>
         </div>
@@ -50,18 +50,18 @@ function MyActivities() {
 
         </ActivitiesTable>
 
- 
-        <br/><br/>
+
+        <br /><br />
         <Button onClick={clickMe}>
           Cancel Request
         </Button>
         <Button onClick={handleRoute}>
           Back
         </Button>
-        
-    </div>
-  </Router>
-    
+
+      </div>
+    </Router>
+
   );
 }
 

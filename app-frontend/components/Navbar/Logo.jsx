@@ -29,7 +29,7 @@ export function Logo(props) {
     <LogoWrapper>
       <LogoImage> <img src={fakeLogo} alt="CleanBack logo" /> </LogoImage>
       <LogoText>
-        CleanBack
+        Environmental Volenteering
       </LogoText>
     </LogoWrapper>
   );

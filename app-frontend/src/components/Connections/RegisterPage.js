@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import {BrowserRouter as Router} from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
+import background from "../../assets/Images/volenteering_background.jpg";
+
 //import ActivitiesTable from "../Tables/ActivitiesTable";
 //&nbsp; regular space.
 //&ensp; two spaces gap.
@@ -9,11 +11,11 @@ import { useHistory } from "react-router-dom";
 
 
 const theme = {
-    green: {
-      default: "#9ccc65",
-      hover: "#7cb342"
-    }
-  };
+  green: {
+    default: "#9ccc65",
+    hover: "#7cb342"
+  }
+};
 
 
 
@@ -30,7 +32,7 @@ const Button = styled.button`
 `
 
 Button.defaultProps = {
-    theme: 'green'
+  theme: 'green'
 }
 
 
@@ -42,66 +44,74 @@ function RegisterPage() {
   const [email, setEmail] = useState('');
   const [userName, setUserName] = useState('');
   const [password, setPassword] = useState('');
-  
+
   const handleSubmit = (evt) => {
     // here we need to check if the usre name and password is corect and move to the home page
     evt.preventDefault();
     alert('user details is: ' + fName + ', ' + lName + ', ' + email + ', ' + userName + ', ' + password)
   }
 
-  const handleRoute = () =>{ 
+  const handleRoute = () => {
     history.push("./LoginPage");
   }
 
   return (
-  <Router>
-    <div className="RegisterPage"> 
-        <div className="content">
-          <h1>Register As A New User</h1>
-        </div>
-        <form onSubmit={handleSubmit}>
-              <br />
-              <lable>
-                First Name: &ensp;&ensp; &emsp;
+    <Router>
+      <div style={{
+        backgroundColor: "white",
+        height: "750px",
+        backgroundImage: `url(${background})`,
+        backgroundRepeat: 'no-repeat',
+      }}>
+        <div className="RegisterPage" style={{
+          marginLeft: "50px",
+        }}>
+          <div className="content">
+            <h2>Register As A New User</h2>
+          </div>
+          <form onSubmit={handleSubmit}>
+            <lable>
+              First Name: &ensp;&ensp; &emsp;
               <input type="text" value={fName} onChange={e => setfName(e.target.value)} />
-              </lable>
-              <br/>
-              <lable>
-                Last Name: &ensp;&ensp; &emsp;
+            </lable>
+            <br />
+            <lable>
+              Last Name: &ensp;&ensp; &emsp;
               <input type="text" value={lName} onChange={e => setlName(e.target.value)} />
-              </lable>
-              <br/>
-              <lable>
-                Email: &ensp;&ensp; &emsp;&emsp;&emsp;&nbsp;
+            </lable>
+            <br />
+            <lable>
+              Email: &ensp;&ensp; &emsp;&emsp;&emsp;&nbsp;
               <input type="text" value={email} onChange={e => setEmail(e.target.value)} />
-              </lable>
-              <br/>
-              <lable>
-                User Name: &ensp; &emsp;&nbsp;
+            </lable>
+            <br />
+            <lable>
+              User Name: &ensp; &emsp;&nbsp;
               <input type="text" value={userName} onChange={e => setUserName(e.target.value)} />
-              </lable>
-              <br/>
-              <lable>
-                User Password: &nbsp;
-              <input type="text" value={password} onChange={e => setPassword(e.target.value)} />
-              </lable>
-              <br/><br/>
-              <Button type="submit" value="Create New User">
-                Create New User
-              </Button>
-          
-              </form>
-              <br/>
+            </lable>
+            <br />
+            <lable>
+              User Password: &nbsp;
+              <input type="password" value={password} onChange={e => setPassword(e.target.value)} />
+            </lable>
+            <br /><br />
+            <Button type="submit" value="Create New User">
+              Create New User
+            </Button>
+
+          </form>
+          <br />
 
 
 
-        <Button onClick={handleRoute}>
-          Back
-        </Button>
+          <Button onClick={handleRoute}>
+            Back
+          </Button>
 
-    </div>
-  </Router>
-    
+        </div>
+      </div>
+    </Router>
+
   );
 }
 

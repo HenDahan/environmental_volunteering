@@ -1,22 +1,23 @@
 import React from "react";
-function Contact(){
-    return ( 
-        <div>
-            <h1>Contact Us:</h1>
-            <p>
-                This Is App Made By: Hen Dahan, Kfir Ram and Tzuriel Yeffet.
-                <br/>
-                Contact us by mail
-                <br/>
-                Hen Dahan: &emsp; @walla......
-                <br/>
-                Kfir Ram: &emsp; @walla......
-                <br/>
-                Tzuriel Yeffet: &emsp; @walla......
-
-                
-            </p>
-        </div>
+function Contact() {
+    return (
+        <div style={{
+            backgroundColor: "lightblue"
+        }}>
+            <div style={{
+                marginLeft: "50px",
+            }}>
+                <div>
+                    <h1>Contact Us:</h1>
+                    <p>
+                        <h3>This Application Created By:</h3>
+                        <h4 style={{ color: "blueviolet" }}>Hen Dahan: &emsp; https://github.com/HenDahan</h4>
+                        <h4 style={{ color: "blueviolet" }}>Kfir Ram: &emsp; https://github.com/kfir-ram</h4>
+                        <h4 style={{ color: "blueviolet" }}>Tzuriel Yeffet: &emsp; https://github.com/TzurielYeffet</h4>
+                    </p>
+                </div>
+            </div>
+        </div >
     );
 }
 

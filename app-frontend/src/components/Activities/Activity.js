@@ -1,5 +1,5 @@
 import React from 'react'
-import {BrowserRouter as Router} from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
 
@@ -7,11 +7,11 @@ import { useHistory } from "react-router-dom";
 /* materialpalette.com/colors */
 
 const theme = {
-    green: {
-      default: "#9ccc65",
-      hover: "#7cb342"
-    }
-  };
+  green: {
+    default: "#9ccc65",
+    hover: "#7cb342"
+  }
+};
 
 
 const Button = styled.button`
@@ -27,71 +27,73 @@ const Button = styled.button`
 `
 
 Button.defaultProps = {
-    theme: 'green'
+  theme: 'green'
 }
 
 function Activity() {
   const history = useHistory();
-  const handleRouteHome = () =>{ 
+  const handleRouteHome = () => {
     history.push("../Home");
   }
-  const handleRouteMyActivities = () =>{ 
+  const handleRouteMyActivities = () => {
     history.push("./MyActivities");
   }
-  const handleRouteCreateNewActivity = () =>{ 
+  const handleRouteCreateNewActivity = () => {
     history.push("./CreateNewActivity");
   }
-  const handleRouteSearchActivity = () =>{ 
+  const handleRouteSearchActivity = () => {
     history.push("./SearchActivity");
   }
-    const handleRouteActivitySignUp = () =>{ 
+  const handleRouteActivitySignUp = () => {
     history.push("./ActivitySignUp");
   }
-  const handleRouteMangeActivities = () =>{ 
+  const handleRouteMangeActivities = () => {
     history.push("./MangeActivities");
   }
-  
+
   return (
-  <Router>
-    <div className="Activity"> 
+    <Router>
+      <div className="Activity" style={{
+        marginLeft: "50px"
+      }}>
         <div className="content">
           <h1>Activities Page:</h1>
         </div>
 
-        <br/>
+        <br />
         <Button onClick={handleRouteMyActivities}>
           My Activiteis
         </Button>
-        <br/>
-        <br/>
+        <br />
+        <br />
         <Button onClick={handleRouteActivitySignUp}>
           Activity Sign-Up
         </Button>
-        <br/>
-        <br/>
+        <br />
+        <br />
         <Button onClick={handleRouteCreateNewActivity}>
           Create New Activiteis
         </Button>
-        <br/>
-        <br/>
+        <br />
+        <br />
         <Button onClick={handleRouteSearchActivity}>
           Serch Activiteis
         </Button>
-        <br/>
-        <br/>
+        <br />
+        <br />
         <Button onClick={handleRouteMangeActivities}>
           Mange Activities
         </Button>
-        <br/>
-        <br/>
+        <br />
+        <br />
         <Button onClick={handleRouteHome}>
           Back
         </Button>
-        
-        
-    </div>
-  </Router>
-    
+
+
+      </div>
+    </Router>
+
   );
 }
 
