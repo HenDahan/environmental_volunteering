@@ -33,6 +33,7 @@ function App() {
             <Route path="/connections/LoginPage" component={LoginPage} />
             <Route path="/connections/RegisterPage" component={RegisterPage} />
             <Route path="/Activities/MangeActivities" component={MangeActivities} />
+            <Route path="" component={LoginPage} />
 
           </Switch>}
         </div>

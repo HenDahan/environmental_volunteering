@@ -3,6 +3,10 @@ import image1 from '../assets/Images/vol1.jpg';
 import image2 from '../assets/Images/vol2.png';
 import image3 from '../assets/Images/vol3.jpg';
 import styled from "styled-components";
+import yellow_ad from "../assets/Images/yellow_ad.jpg";
+import sonol_ad from "../assets/Images/sonol_ad.jpg";
+
+
 
 const theme = {
   green: {
@@ -64,7 +68,11 @@ function Home() {
         {/*Commercials and updates */}
         <br /><br /><br />
         <p>
-          Commercials and updates....
+          <h4>Commercials Ads:</h4>
+          <br/>
+          {<img src={yellow_ad} alt="yellow ad" style={{height: "250px", width: "300px"}}/>}
+          <br/><br/>
+          {<img src={sonol_ad} alt="sonol ad" style={{height: "250px", width: "300px"}}/>}
         </p>
 
       </div>

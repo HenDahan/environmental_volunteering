@@ -52,45 +52,53 @@ function Activity() {
   }
 
   return (
+    
     <Router>
+      <div style={{
+            backgroundColor: "lightskyblue",
+            height: "1000px"
+            
+        }}>
       <div className="Activity" style={{
         marginLeft: "50px"
       }}>
         <div className="content">
-          <h1>Activities Page:</h1>
+          <br/>
+          <h1 style={{ color: "blue" }}>Activities Page:</h1>
         </div>
 
         <br />
-        <Button onClick={handleRouteMyActivities}>
+        <Button style={{backgroundColor: "lightsteelblue"}} onClick={handleRouteMyActivities}>
           My Activiteis
         </Button>
         <br />
         <br />
-        <Button onClick={handleRouteActivitySignUp}>
+        <Button style={{backgroundColor: "lightsteelblue"}} onClick={handleRouteActivitySignUp}>
           Activity Sign-Up
         </Button>
         <br />
         <br />
-        <Button onClick={handleRouteCreateNewActivity}>
+        <Button style={{backgroundColor: "lightsteelblue"}} onClick={handleRouteCreateNewActivity}>
           Create New Activiteis
         </Button>
         <br />
         <br />
-        <Button onClick={handleRouteSearchActivity}>
+        <Button style={{backgroundColor: "lightsteelblue"}} onClick={handleRouteSearchActivity}>
           Serch Activiteis
         </Button>
         <br />
         <br />
-        <Button onClick={handleRouteMangeActivities}>
+        <Button style={{backgroundColor: "lightsteelblue"}} onClick={handleRouteMangeActivities}>
           Mange Activities
         </Button>
         <br />
         <br />
-        <Button onClick={handleRouteHome}>
+        <Button style={{backgroundColor: "lightsteelblue"}} onClick={handleRouteHome}>
           Back
         </Button>
 
 
+      </div>
       </div>
     </Router>
 
