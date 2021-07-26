@@ -12,7 +12,6 @@ const ScreenSize = {
   Laptop: 1324,
   Desktop: 2024
 };
-
 const NavbarContainer = styled.div`
   width: 100%;
   height: 60px;
@@ -34,7 +33,6 @@ const MiddleSection = styled.div`
 const RightSection = styled.div`
   display: flex;
 `;
-
 export function Navbar(props) {
   const isMobile = useMediaQuery({ maxWidth: ScreenSize.Mobile });
   return (
