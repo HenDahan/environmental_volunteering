@@ -1,4 +1,5 @@
 import React from "react";
+{/* A little about our project */}
 function AboutUs() {
     return (
         <div style={{

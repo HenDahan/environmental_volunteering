@@ -5,15 +5,12 @@ import { useHistory } from "react-router-dom";
 import ActivitiesTable from "../Tables/ActivitiesTable";
 import { useState } from "react";
 
-
 const theme = {
   green: {
     default: "#9ccc65",
     hover: "#7cb342"
   }
 };
-
-
 
 const Button = styled.button`
     background-color: ${props => theme[props.theme.default]};
@@ -32,26 +29,21 @@ Button.defaultProps = {
 }
 
 function MangeActivities(props) {
-
   const [activityType, setActivityType] = useState('Beach cleaning');
   const handleSubmit = (evt) => {
     evt.preventDefault();
     alert('Mange Activities is: ' + activityType)
   }
 
-
-
   const history = useHistory();
   const handleRoute = (evt) => {
     history.push("./Activity");
   }
 
-
   return (
     <Router>
       <div className="MangeActivities" style={{ marginLeft: "50px" }}>
         <div className="content">
-
         </div>
         <h1>Mange Activities</h1>
         <form onSubmit={handleSubmit}>
@@ -68,21 +60,14 @@ function MangeActivities(props) {
           <input type="submit" value="Present" />
         </form>
         <br />
-
-
         <ActivitiesTable >
-
         </ActivitiesTable>
-
-
         <br /><br />
         <Button onClick={handleRoute}>
           Back
         </Button>
-
       </div>
     </Router>
-
   );
 }
 

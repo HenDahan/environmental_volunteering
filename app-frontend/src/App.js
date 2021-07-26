@@ -1,5 +1,3 @@
-// import logo from './logo.svg';
-// import './App.css';
 import React from 'react'
 import { Navbar } from "./components/Navbar/Navbar";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -22,6 +20,7 @@ function App() {
         <Navbar />
         <div className="content">
           {<Switch>
+            {/*Route that matchs for each url - default "" = LoginPage */}
             <Route exact path="/Home" component={Home} />
             <Route path="/Activities/Activity" component={Activity} />
             <Route path="/Activities/CreateNewActivity" component={CreateNewActivity} />
@@ -37,7 +36,6 @@ function App() {
 
           </Switch>}
         </div>
-        {/* <Footer /> */}
       </div>
     </Router>
 

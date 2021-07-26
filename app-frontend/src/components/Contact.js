@@ -1,4 +1,5 @@
 import React from "react";
+{/* contact page with our github information */}
 function Contact() {
     return (
         <div style={{

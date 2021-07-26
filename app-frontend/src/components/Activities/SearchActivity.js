@@ -5,15 +5,12 @@ import { useHistory } from "react-router-dom";
 import ActivitiesTable from "../Tables/ActivitiesTable";
 import { useState } from "react";
 
-
 const theme = {
   green: {
     default: "#9ccc65",
     hover: "#7cb342"
   }
 };
-
-
 
 const Button = styled.button`
     background-color: ${props => theme[props.theme.default]};
@@ -40,19 +37,15 @@ function SearchActivity(props) {
     alert('Search Activity is: ' + activityCity + ', ' + activityType + ', ' + activityDate)
   }
 
-
-
   const history = useHistory();
   const handleRoute = (evt) => {
     history.push("./Activity");
   }
 
-
   return (
     <Router>
       <div className="SearchActivity" style={{ marginLeft: "50px" }}>
         <div className="content">
-
         </div>
         <h1>Serch Activity</h1>
         <form onSubmit={handleSubmit}>
@@ -61,18 +54,12 @@ function SearchActivity(props) {
             City: &ensp;
             <input type="text" value={activityCity} onChange={e => setActivityCity(e.target.value)} />
           </lable>
-
           &emsp;
-
           <lable>
             Date: &ensp;
             <input type="text" value={activityDate} onChange={e => setActivityDate(e.target.value)} />
           </lable>
-
           &emsp;
-
-
-
           <lable>
             Type: &ensp;
             <select value={activityType} onChange={e => setActivityType(e.target.value)}> //set value here
@@ -85,21 +72,14 @@ function SearchActivity(props) {
           <input type="submit" value="Search" />
         </form>
         <br />
-
-
         <ActivitiesTable>
-
         </ActivitiesTable>
-
-
         <br /><br />
         <Button onClick={handleRoute}>
           Back
         </Button>
-
       </div>
     </Router>
-
   );
 }
 

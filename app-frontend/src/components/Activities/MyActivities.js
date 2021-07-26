@@ -4,7 +4,6 @@ import styled from "styled-components";
 import { useHistory } from "react-router-dom";
 import ActivitiesTable from "../Tables/ActivitiesTable";
 
-
 const theme = {
   green: {
     default: "#9ccc65",
@@ -15,7 +14,6 @@ const theme = {
 function clickMe() {
   alert("it is working");
 }
-
 
 const Button = styled.button`
     background-color: ${props => theme[props.theme.default]};
@@ -45,12 +43,8 @@ function MyActivities() {
         <div className="content">
           <h1>My Activities</h1>
         </div>
-
         <ActivitiesTable>
-
         </ActivitiesTable>
-
-
         <br /><br />
         <Button onClick={clickMe}>
           Cancel Request
@@ -58,10 +52,8 @@ function MyActivities() {
         <Button onClick={handleRoute}>
           Back
         </Button>
-
       </div>
     </Router>
-
   );
 }
 

@@ -6,8 +6,6 @@ import styled from "styled-components";
 import yellow_ad from "../assets/Images/yellow_ad.jpg";
 import sonol_ad from "../assets/Images/sonol_ad.jpg";
 
-
-
 const theme = {
   green: {
     default: "#9ccc65",
@@ -16,9 +14,8 @@ const theme = {
 };
 
 function clickMe() {
-  alert("I Joined To Activity");
+  alert("I Joined To an Activity");
 }
-
 
 const Button = styled.button`
     background-color: ${props => theme[props.theme.default]};
@@ -31,14 +28,11 @@ const Button = styled.button`
         background-color: ${props => theme[props.theme.hover]};
     }
 `
-
 Button.defaultProps = {
   theme: 'green'
 }
 
-
 function Home() {
-
   const Columns = () =>
     <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gridGap: 150 }}>
       {/*Column 1 (left) */}
@@ -65,7 +59,6 @@ function Home() {
         <div style={{ display: 'flex', justifyContent: 'center', height: '10vh' }}>
           <h1> Welcom</h1>
         </div>
-        {/*Commercials and updates */}
         <br /><br /><br />
         <p>
           <h4>Commercials Ads:</h4>
@@ -80,16 +73,14 @@ function Home() {
       {/*Column 3 (right) */}
       <div>
         <br /><br /><br />
-        <h3>Important Messages </h3>
+        <h3 style={{color:"lightcoral"}}>Important Messages </h3>
         <a>
-          Coast cleanup activity <br />
-          on 22.7 was postponed<br />
-          due to the hot weather.<br />
-          The task has been moved<br />
-          to 13 of the next month.
+          <h4 style={{color:"blue"}}>Coast cleanup activity 27.7.21
+          <br/>
+          Due to the hot weather, The activity has been moved<br/>
+          to date 13.8.21, automatically update on your activity.</h4>
         </a>
       </div>
-
     </div>
   return (
     <div>

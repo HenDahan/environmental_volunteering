@@ -4,15 +4,12 @@ import styled from "styled-components";
 import { useHistory } from "react-router-dom";
 
 
-/* materialpalette.com/colors */
-
 const theme = {
   green: {
     default: "#9ccc65",
     hover: "#7cb342"
   }
 };
-
 
 const Button = styled.button`
     background-color: ${props => theme[props.theme.default]};
@@ -25,10 +22,10 @@ const Button = styled.button`
         background-color: ${props => theme[props.theme.hover]};
     }
 `
-
 Button.defaultProps = {
   theme: 'green'
 }
+{/* handle function to navigate via buttons*/}
 
 function Activity() {
   const history = useHistory();
@@ -51,8 +48,8 @@ function Activity() {
     history.push("./MangeActivities");
   }
 
+  
   return (
-    
     <Router>
       <div style={{
             backgroundColor: "lightskyblue",
@@ -96,8 +93,6 @@ function Activity() {
         <Button style={{backgroundColor: "lightsteelblue"}} onClick={handleRouteHome}>
           Back
         </Button>
-
-
       </div>
       </div>
     </Router>

@@ -4,20 +4,12 @@ import styled from "styled-components";
 import { useHistory } from "react-router-dom";
 import background from "../../assets/Images/volenteering_background.jpg";
 
-//import ActivitiesTable from "../Tables/ActivitiesTable";
-//&nbsp; regular space.
-//&ensp; two spaces gap.
-//&emsp; four spaces gap.
-
-
 const theme = {
   green: {
     default: "#9ccc65",
     hover: "#7cb342"
   }
 };
-
-
 
 const Button = styled.button`
     background-color: ${props => theme[props.theme.default]};
@@ -35,8 +27,6 @@ Button.defaultProps = {
   theme: 'green'
 }
 
-
-
 function RegisterPage() {
   const history = useHistory();
   const [fName, setfName] = useState('');
@@ -44,7 +34,6 @@ function RegisterPage() {
   const [email, setEmail] = useState('');
   const [userName, setUserName] = useState('');
   const [password, setPassword] = useState('');
-
   const handleSubmit = (evt) => {
     // here we need to check if the usre name and password is corect and move to the home page
     evt.preventDefault();
@@ -98,20 +87,14 @@ function RegisterPage() {
             <Button type="submit" value="Create New User">
               Create New User
             </Button>
-
           </form>
           <br />
-
-
-
           <Button onClick={handleRoute}>
             Back
           </Button>
-
         </div>
       </div>
     </Router>
-
   );
 }
 

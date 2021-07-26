@@ -4,7 +4,6 @@ import styled from "styled-components";
 import { useHistory } from "react-router-dom";
 import ActivitiesTable from "../Tables/ActivitiesTable";
 
-
 const theme = {
   green: {
     default: "#9ccc65",
@@ -15,7 +14,6 @@ const theme = {
 function JoinToActivity() {
   alert("I Joined To Activity");
 }
-
 
 const Button = styled.button`
     background-color: ${props => theme[props.theme.default]};
@@ -35,7 +33,6 @@ Button.defaultProps = {
 
 function ActivitySignUp() {
   const history = useHistory();
-
   const handleRoute = () => {
     history.push("./Activity");
   }
@@ -45,11 +42,8 @@ function ActivitySignUp() {
         <div className="content">
           <h1>Activity Sign-Up</h1>
         </div>
-
         <ActivitiesTable>
-
         </ActivitiesTable>
-
         <br /><br />
         <Button onClick={JoinToActivity}>
           Ask to join
@@ -57,10 +51,8 @@ function ActivitySignUp() {
         <Button onClick={handleRoute}>
           Back
         </Button>
-
       </div>
     </Router>
-
   );
 }
 

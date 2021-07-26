@@ -10,9 +10,6 @@ const theme = {
   }
 };
 
-
-
-
 const Button = styled.button`
     background-color: ${props => theme[props.theme.default]};
     padding: 5px 15px;
@@ -24,11 +21,9 @@ const Button = styled.button`
         background-color: ${props => theme[props.theme.hover]};
     }
 `
-
 Button.defaultProps = {
   theme: 'green'
 }
-
 
 function LoginPage() {
   const [userName, setUserName] = useState('');
@@ -37,26 +32,21 @@ function LoginPage() {
   const history = useHistory();
 
   const moveToRegistration = () => {
-    alert("it is workingdddd");
     history.push("./RegisterPage");
   }
 
   const handleSubmit = (evt) => {
     // here we need to check if the usre name and password is corect and move to the home page
     evt.preventDefault();
-    alert('user name and password is: ' + userName + ', ' + password)
+    //alert('user name and password are: ' + userName + ', ' + password)
     if (userName == "admin" && password == "123456") {
       history.push("../Home");
     }
     else {
-      alert('user name and password is incorect')
+      alert('user name and password are incorect')
     }
   }
-
-
-
-
-
+{/*input User name and password on a form submit.*/}
   return (
     <div style={{
       backgroundColor: "white",
@@ -68,7 +58,6 @@ function LoginPage() {
         marginLeft: "50px",
       }}>
         <h2>Login</h2>
-
         <form onSubmit={handleSubmit}>
           <lable>
             {`User Name:   `}  &nbsp; &nbsp; &nbsp; &ensp;
@@ -91,10 +80,7 @@ function LoginPage() {
         <Button onClick={moveToRegistration}>
           Registration
         </Button>
-
       </div>
-
-
     </div>
   );
 }

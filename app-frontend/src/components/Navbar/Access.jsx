@@ -59,7 +59,6 @@ const RegisterButton = styled.button`
 export function Access(props) {
   let history = useHistory();
 
-
   const redirectRegister = () => {
       history.push('../connections/RegisterPage')
   }
