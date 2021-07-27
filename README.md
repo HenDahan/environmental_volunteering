@@ -14,7 +14,11 @@ An application that encourages people to volunteer for environment activities.
 #
 		npm install react-data-table-component styled-components 
 #
-		npm start dev 
+		cd ..\app-backend
+#
+		npm install
+#
+		npm run dev
 #
 
 ### Created by:
