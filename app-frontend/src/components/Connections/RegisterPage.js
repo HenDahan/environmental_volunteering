@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState ,useEffect} from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
 import background from "../../assets/Images/volenteering_background.jpg";
+import axios from 'axios';
 
 const theme = {
   green: {
@@ -29,23 +30,40 @@ Button.defaultProps = {
 
 function RegisterPage() {
   const history = useHistory();
-  const [fName, setfName] = useState('');
-  const [lName, setlName] = useState('');
-  const [email, setEmail] = useState('');
-  const [userName, setUserName] = useState('');
-  const [password, setPassword] = useState('');
-  const handleSubmit = (evt) => {
-    if(fName.length == 0 || lName.length == 0 || email.length == 0 || userName.length == 0 || password.length < 6){
-      alert('You must fill out all fields to sign up for the site.\n(password most be at list 6 characters')  
-    } else {
-      // here we need to check if the usre name and password is corect and move to the home page
-      evt.preventDefault();
-      //alert('user details is: ' + fName + ', ' + lName + ', ' + email + ', ' + userName + ', ' + password)
-      alert('The user ' + userName + ' is created.\nNow all you need is to login')
-      history.push("./LoginPage");
-    }
+
+  const [input,setInput] = useState({
+    fName:'',
+    lName:'',
+    email:'',
+    username:'',
+    password:''
+  })
+  function handleChange(event){
+    const {name,value} = event.target;
+    setInput(prevInput =>{
+        return{
+         ...prevInput,
+          [name]: value
+        }
+    })
   }
 
+  function handleClick(event){
+    event.preventDefault();
+    const newUser = {
+      fName: input.first_name,
+      lName:input.last_name,
+      email:input.email,
+      // userName:input.value,
+      password:input.password,
+      password2:input.password2
+    }
+     axios.post('http://localhost:5001/register',newUser);
+     handleRoute();
+  }
+
+
+  
   const handleRoute = () => {
     history.push("./LoginPage");
   }
@@ -64,40 +82,40 @@ function RegisterPage() {
           <div className="content">
             <h2>Register As A New User</h2>
           </div>
-          <form onSubmit={handleSubmit}>
+          <form /*onSubmit={handleSubmit}*/>
             <lable>
               First Name: &ensp;&ensp; &emsp;
-              <input type="text" value={fName} onChange={e => setfName(e.target.value)} />
+              <input type="text" name="first_name" value={input.first_name} onChange={handleChange} />
             </lable>
             <br />
             <lable>
               Last Name: &ensp;&ensp; &emsp;
-              <input type="text" value={lName} onChange={e => setlName(e.target.value)} />
+              <input type="text" name="last_name" value={input.last_name} onChange={handleChange} />
             </lable>
             <br />
             <lable>
               Email: &ensp;&ensp; &emsp;&emsp;&emsp;&nbsp;
-              <input type="text" value={email} onChange={e => setEmail(e.target.value)} />
-            </lable>
-            <br />
-            <lable>
-              User Name: &ensp; &emsp;&nbsp;
-              <input type="text" value={userName} onChange={e => setUserName(e.target.value)} />
+              <input type="text" name="email" value={input.email} onChange={handleChange} />
             </lable>
             <br />
             <lable>
               User Password: &nbsp;
-              <input type="password" value={password} onChange={e => setPassword(e.target.value)} />
+              <input type="password" name="password" value={input.password} onChange={handleChange} />
+            </lable>
+            <br />
+            <lable>
+              Retype Password: &nbsp;
+              <input type="password" name="password2" value={input.password2} onChange={handleChange} />
             </lable>
             <br /><br />
-            <Button type="submit" value="Create New User">
+            <Button  onClick={handleClick} type="submit" value="Create New User">
               Create New User
             </Button>
           </form>
           <br />
-          <Button onClick={handleRoute}>
+          {/* <Button onClick={handleRoute}>
             Back
-          </Button>
+          </Button> */}
         </div>
       </div>
     </Router>
