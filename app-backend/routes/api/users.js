@@ -11,68 +11,82 @@ const passport = require('passport');
 //@ desc Register user
 //
 
-router.post("/register", (req, res) => {
-    const {
-        errors,
-        isValid
-    } = validateRegisterInput(req.body);
-    if (!isValid) {
-        return res.status(400).json(errors);
-    }
-    User.findOne({
-        username: req.body.email
-    }).then(user => {
-        if (user) {
-            res.status(400).json({
-                email: "Email already in use."
-            });
-        } else {
+router.route("/register").post( (req, res) => {
+    console.log("hello");
+    console.log(req.body);
+  
+    // const {
+    //     errors,
+    //     isValid
+    // } = validateRegisterInput(req.body);
+    // if (!isValid) {
+    //     return res.status(400).json(errors);
+    // }
+    // User.findOne({
+        // username: req.body.email
+    // }).then(user => {
+    //     if (user) {
+    //         res.status(400).json({
+    //             email: "Email already in use."
+    //         });
+    //     } else {
             const newUser = new User({
-                fName: req.body.fname,
-                lName: req.body.lname,
-                username: req.body.email
+                fName :req.body.first_name,
+                lName : req.body.last_name,
+                username : req.body.email,
+                password : req.body.password
             });
-            User.register(newUaer, req.body.password, (err, newUser) => {
-                if (err) {
-                    console.log(err);
-                    res.redirect("/register");
-                } else {
-                    passport.authenticate("local")(req, res, () => {
-                        res.redirect("/");
-                    });
-                }
+            console.log("this is 1 : " + newUser);
+
+            User.register(newUser, req.body.password, (err, newUser) => {
+                console.log("this is : " + newUser);
+                return res.status(200).send();
+                // if (err) {
+                //     console.log(err);
+                //     res.redirect("/register");
+                // } else {
+                //     console.log("else");
+                //     passport.authenticate("local")(req, res, () => {
+                //         res.redirect("/");
+                //     });
+                // }
 
             })
 
-        }
-    })
+        // }
+    // })
+    // newUser.save();
 });
 
 //@route POST api/users/login
 //@ desc Login user
 //
 router.post("/login", (req, res) => {
-    let {
-        errors,
-        isValid
-    } = validateLoginInput(req.body);
-    if (!isValid) {
-        res.status(400).json(errors)
-    }
-    const user = new User({
-        username: req.body.email,
-        password: req.body.password
-    });
-    user.login(user, (err) => {
-        if (err) {
-            res.status(400).json(err);
+    console.log("LOGIN");
+    // let {
+    //     errors,
+    //     isValid
+    // } = validateLoginInput(req.body);
+    // if (!isValid) {
+    //     res.status(400).json(errors)
+    // }
+  
+      const  username = req.body.email;
+    const password = req.body.password;
+    console.log(req.body.email);
+    console.log(req.body.password);
+
+    User.findOne({username:username,password:password},(err,user)=>{
+        if(err){
+            console.log(err);
+            return res.status(500).send();
         }
-        passport.isAuthenticated("local")(req, res, () => {
-            res.redirect("/");
-        })
-
-
-    });
+        if(!user){
+            return res.status(404).send();
+    
+        }
+        return res.status(200).send();
+    })
 
 });
 module.exports = router;
