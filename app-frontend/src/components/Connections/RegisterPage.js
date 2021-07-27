@@ -35,9 +35,15 @@ function RegisterPage() {
   const [userName, setUserName] = useState('');
   const [password, setPassword] = useState('');
   const handleSubmit = (evt) => {
-    // here we need to check if the usre name and password is corect and move to the home page
-    evt.preventDefault();
-    alert('user details is: ' + fName + ', ' + lName + ', ' + email + ', ' + userName + ', ' + password)
+    if(fName.length == 0 || lName.length == 0 || email.length == 0 || userName.length == 0 || password.length < 6){
+      alert('You must fill out all fields to sign up for the site.\n(password most be at list 6 characters')  
+    } else {
+      // here we need to check if the usre name and password is corect and move to the home page
+      evt.preventDefault();
+      //alert('user details is: ' + fName + ', ' + lName + ', ' + email + ', ' + userName + ', ' + password)
+      alert('The user ' + userName + ' is created.\nNow all you need is to login')
+      history.push("./LoginPage");
+    }
   }
 
   const handleRoute = () => {

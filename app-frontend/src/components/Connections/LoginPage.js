@@ -39,9 +39,12 @@ function LoginPage() {
     // here we need to check if the usre name and password is corect and move to the home page
     evt.preventDefault();
     //alert('user name and password are: ' + userName + ', ' + password)
-    if (userName == "admin" && password == "123456") {
+    if (((userName == "admin" || userName.length == 1) && (password == "123456")) || (userName == "hen" && password == "654321")) {
       history.push("../Home");
     }
+    
+
+    
     else {
       alert('user name and password are incorect')
     }
